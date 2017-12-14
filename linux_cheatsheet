@@ -1,0 +1,8 @@
+// find all files with the matching pattern in current directory
+$ find . -name 'wp-*'
+
+// find all regular files with name ending with '.log'
+$ find -type f -name "*.log"
+
+// find all regular files with name 'wp_settings.php'
+$ find -type f -name "wp_settings.php"
