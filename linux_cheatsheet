@@ -6,3 +6,68 @@ $ find -type f -name "*.log"
 
 // find all regular files with name 'wp_settings.php'
 $ find -type f -name "wp_settings.php"
+
+// -- grep --
+$ grep [options] pattern [files]
+
+
+Option	Description
+-b	Display the block number at the beginning of each line.
+-c	Display the number of matched lines.
+-h	Display the matched lines, but do not display the filenames.
+-i	Ignore case sensitivity.
+-l	Display the filenames, but do not display the matched lines.
+-n	Display the matched lines and their line numbers.
+-s	Silent mode.
+-v	Display all lines that do NOT match.
+-w	Match whole word.
+
+$ grep -v "Leaking python objects bridged to UNO" <filename>
+
+
+// -- tmux --
+
+// Monitor tmux session
+$ tmux attach -t monitor
+
+// -- tmux shortcuts
+// detach from tmux session
+Ctrl + b and d
+
+// -- Shell scripts --
+
+// Run Shell script
+$ ./yourscript.sh
+OR 
+$ /path/to/yourscript.sh
+
+// Run as sudo
+$ sudo ./yourscript.sh
+OR 
+$ sudo /path/to/yourscript.sh
+
+//  processes running on server
+## Watch unoconv and other process runnning on server
+$ watch -n5 -d "ps aux | egrep '(VSZ|soffice|unoconv|clamscan|gs)' | egrep -v '(grep|watch)' ## moodle-g"
+
+// Check the current proceses running on server
+$ ps aux | egrep '(VSZ|soffice|unoconv|clamscan|gs)
+
+
+// -------------------------
+
+// -- less --
+
+$ less <filename>
+
+// -- less command shortcuts
+q	quit	 
+/	search forward	 
+?	search back	 
+G	end of file	 
+home	start of file	 
+m{a-z}	mark position as {a-z}.	E.g. ma
+'{a-z}	move to position {a-z}.	E.g. 'a
+ 	 	 
+h	show key bindings	 
+v	edit file
